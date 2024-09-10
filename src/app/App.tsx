@@ -1,13 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MainLayout } from "./layouts/MainLayout";
+import { RouterProvider } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { router } from "./providers/router";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />} />
-      </Routes>
-    </BrowserRouter>
+    <AnimatePresence mode="wait">
+      <RouterProvider router={router} />
+    </AnimatePresence>
   );
 };
 

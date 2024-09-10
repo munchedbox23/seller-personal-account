@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/munchedbox23/seller-personal-account#readme",
   "dependencies": {
+    "framer-motion": "^11.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
