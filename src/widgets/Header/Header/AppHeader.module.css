@@ -1,0 +1,39 @@
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  composes: header-flex;
+  height: 70px;
+  position: sticky;
+  z-index: 11;
+  width: 100%;
+  background-color: var(--palette-white);
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.27);
+}
+
+.headerWrapper {
+  composes: header-flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 16px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.headerLogo {
+  width: 115px;
+  position: relative;
+  height: 30px;
+  top: 2px;
+}
+
+.headerNavigation {
+  composes: header-flex;
+  gap: 50px;
+  flex-grow: 1;
+  justify-content: center;
+}

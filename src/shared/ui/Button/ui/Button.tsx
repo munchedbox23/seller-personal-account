@@ -11,7 +11,7 @@ type TButtonProps = ComponentProps<"button"> & {
 };
 
 const sizeStyles = {
-  sm: "padding: 0.5rem 1rem; font-size: 0.9rem;",
+  sm: "padding: 0.45rem 1rem 0.55rem; font-size: 0.875rem;",
   md: "padding: 1rem 1.5rem; font-size: 1rem;",
   lg: "padding: 1.2rem 2rem; font-size: 1.125rem;",
 };
@@ -25,9 +25,12 @@ const variantStyles = {
 
 const StyledButton = styled.button<TButtonProps>`
   width: max-content;
+  text-align: center;
   border-radius: 0.375rem;
   cursor: pointer;
+  line-height: 1.5;
   opacity: 1;
+  font-weight: 600;
   transition: opacity 0.7s ease;
   border: none;
   ${({ size }) => sizeStyles[size]}
