@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Logo from "@/shared/assets/images/avito.png";
 import { FC } from "react";
+import { Modal } from "@/shared/ui/Modal/ui/Modal";
 
 export const MainLayout: FC = () => {
   return (
@@ -8,9 +9,7 @@ export const MainLayout: FC = () => {
       <header>
         <img src={Logo} alt="Avito logo" />
       </header>
-      <main>
-        <Outlet />
-      </main>
+      <Modal onClose={() => console.log(1)} />
     </>
   );
 };
