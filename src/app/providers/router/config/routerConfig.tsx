@@ -5,7 +5,7 @@ import { appRoutes } from "@/shared/const/router";
 
 export const router = createBrowserRouter([
   {
-    path: appRoutes.allAdvertisements,
+    path: "/",
     element: <MainLayout />,
   },
   {

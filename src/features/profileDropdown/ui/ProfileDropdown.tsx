@@ -6,22 +6,20 @@ import { MenuItem as BaseMenuItem, menuItemClasses } from "@mui/base/MenuItem";
 import { styled } from "@mui/system";
 import { CssTransition } from "@mui/base/Transitions";
 import { PopupContext } from "@mui/base/Unstable_Popup";
+import { useNavigate } from "react-router-dom";
+import { appRoutes } from "@/shared/const/router";
 
 export const ProfileDropdown = () => {
-  const createHandleMenuClick = (menuItem: string) => {
-    return () => {
-      console.log(`Clicked on ${menuItem}`);
-    };
-  };
+  const navigate = useNavigate();
 
   return (
     <Dropdown>
       <MenuButton>Личный кабинет</MenuButton>
       <Menu slots={{ listbox: AnimatedListbox }}>
-        <MenuItem onClick={createHandleMenuClick("Profile")}>Мои объявления</MenuItem>
-        <MenuItem onClick={createHandleMenuClick("Language settings")}>
-          Заказы
+        <MenuItem onClick={() => navigate(appRoutes.allAdvertisements)}>
+          Мои объявления
         </MenuItem>
+        <MenuItem onClick={() => navigate(appRoutes.orders)}>Заказы</MenuItem>
       </Menu>
     </Dropdown>
   );
