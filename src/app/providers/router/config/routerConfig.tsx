@@ -5,6 +5,7 @@ import { appRoutes } from "@/shared/const/router";
 import { AdvertisementPage } from "@/pages/AdvertisementPage";
 import { Navigate } from "react-router-dom";
 import { SelectedAdvertisementPage } from "@/pages/SelectedAdvertisementPage";
+import { OrdersPage } from "@/pages/OrdersPage";
 
 export const router = createBrowserRouter([
   { path: "/", element: <Navigate to={appRoutes.allAdvertisements} /> },
@@ -19,7 +20,16 @@ export const router = createBrowserRouter([
       { path: appRoutes.advertisement, element: <SelectedAdvertisementPage /> },
     ],
   },
-
+  {
+    path: appRoutes.orders,
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <OrdersPage />,
+      },
+    ],
+  },
   {
     path: appRoutes.not_found,
     element: <NotFoundPage />,

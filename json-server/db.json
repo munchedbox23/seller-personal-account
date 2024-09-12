@@ -79,6 +79,96 @@
       "views": 200000,
       "likes": 302,
       "imageUrl": "https://avatars.mds.yandex.net/i?id=ef9f6fa5b7e7f11d46d44dfe47d9b7ee_l-8438571-images-thumbs&n=13"
+    },
+    {
+      "id": "a1b2c3d4-5e6f-7g8h-9i10-jklmnopqrst",
+      "name": "Антикварный стол",
+      "description": "Антикварный деревянный стол с резными ножками. Прекрасный предмет для интерьера, созданный в начале 20 века. Отличное состояние, идеален для коллекционеров или ценителей классики.",
+      "price": 15000,
+      "createdAt": "2024-01-15T10:20:30.351Z",
+      "views": 120,
+      "likes": 18,
+      "imageUrl": "https://60.img.avito.st/image/1/1.wNQ-aLa4bD0Iwa44MkfAwhDJbjuAye41SMxuP47BZDeI.cTExEHfFBxpRKS6h3jWOe94FXwzTgrQxRurbkV0-3zQ"
+    },
+    {
+      "id": "b2c3d4e5-6f7g-8h9i-10jk-lmnopqrstuv",
+      "name": "Ретро-радио",
+      "description": "Радиоприемник 60-х годов, полностью рабочий. Идеально впишется в интерьер с ретро-дизайном или станет хорошим подарком для коллекционера.",
+      "price": 8000,
+      "createdAt": "2024-03-12T14:45:55.351Z",
+      "views": 340,
+      "likes": 75,
+      "imageUrl": "https://60.img.avito.st/image/1/1.NxquXba5m_OY9Fn2zDkUSUv-nfkafpMxH_6Z9xL0kfE.00tMLtx_un01dlMnvz3XmMu83mu7Bulqyz5S9OB1BGA"
+    },
+    {
+      "id": "c3d4e5f6-7g8h-9i10-jklmnopqrst",
+      "name": "Механические часы",
+      "description": "Классические механические часы с кожаным ремешком. Прекрасный аксессуар для ценителей традиционных технологий и стиля.",
+      "price": 20000,
+      "createdAt": "2023-12-22T08:30:25.351Z",
+      "views": 450,
+      "likes": 32,
+      "imageUrl": "https://40.img.avito.st/image/1/1.EX3gp7a4vZTWDn-RztcWE88Gv5JeBj-clgO_llAOtZ5W.-jp3h4FN6I9xW0gWlnRJGcOyjJhFXsTKtrmhwcLY-no"
+    },
+    {
+      "id": "d4e5f6g7-8h9i-10jk-lmnopqrstuv",
+      "name": "Рояль",
+      "description": "Роскошный рояль, идеально подойдет как для профессиональных музыкантов, так и для ценителей прекрасного. Прекрасное состояние и уникальное звучание.",
+      "price": 500000,
+      "createdAt": "2024-05-30T18:45:55.351Z",
+      "views": 220,
+      "likes": 19,
+      "imageUrl": "https://10.img.avito.st/image/1/1.7Tvqgba4QdLcKIPXvL6oJ4EjQ9RUIMPanCVD0FooSdhc.jadoxq4wqn58sKOK1a6xcQjTgkXtpP7gfm3lG2838Z8"
+    },
+    {
+      "id": "e5f6g7h8-9i10-jklmnopqrst",
+      "name": "Винтажная лампа",
+      "description": "Уникальная винтажная лампа, выполненная из меди и стекла. Идеально подойдет для освещения в спальне или гостиной, добавляя особое тепло и уют.",
+      "price": 3000,
+      "createdAt": "2024-02-14T09:25:55.351Z",
+      "views": 500,
+      "likes": 48,
+      "imageUrl": "https://30.img.avito.st/image/1/1.15FDPba5e3h1lLl9YVbm4o6efXL3HnO68p55fP-UcXo.jsgRRuruAm3lk67D-jhAt16TSHtDZeHaxB_DNZ_MfMw"
+    },
+    {
+      "id": "f6g7h8i9-10jk-lmnopqrstuv",
+      "name": "Кофемашина",
+      "description": "Современная кофемашина с множеством режимов и функций. Идеальный выбор для тех, кто любит качественный кофе по утрам.",
+      "price": 25000,
+      "createdAt": "2024-04-10T11:20:55.351Z",
+      "views": 380,
+      "likes": 60,
+      "imageUrl": "https://00.img.avito.st/image/1/1.QiWkwLa47sySaSzJrOUUE5Ji7MoaYWzE0mTszhRp5sYS.r9-YFrOhCJMOTyVs6RCQxCcuTuCkmbDOJsnbjo71izk"
+    },
+    {
+      "id": "g7h8i9j10-klmnopqrst",
+      "name": "Горный велосипед",
+      "description": "Прочный и надежный велосипед для езды по пересеченной местности. Легкая рама, амортизация и мощные тормоза.",
+      "price": 60000,
+      "createdAt": "2024-06-18T12:50:55.351Z",
+      "views": 890,
+      "likes": 150,
+      "imageUrl": "https://00.img.avito.st/image/1/1.BGqkO7a4qIOSkmqGoHdGSoqaqoUamiqL0p-qgRSSoIkS.JF-YikfAplEKxajxBTkVE1xMqT3uuwd5dJTYFmlxDEg"
+    },
+    {
+      "id": "i9j10klmnopqrstu",
+      "name": "Игровая консоль",
+      "description": "Новая игровая консоль последнего поколения. Поддерживает все современные игры с высоким качеством графики и производительности.",
+      "price": 70000,
+      "createdAt": "2024-08-05T14:35:55.351Z",
+      "views": 2000,
+      "likes": 300,
+      "imageUrl": "https://90.img.avito.st/image/1/1._mEoIra4Uogei5CNWA3NXVKAUI6Wg9CAXoZQipiLWoKe.EeVk7nQMnguKYRgbyb0zGpAwZYAcBVtqmjNjJwp_LCk"
+    },
+    {
+      "id": "j10klmnopqrstu",
+      "name": "Микроволновая печь",
+      "description": "Современная микроволновая печь с различными режимами готовки и разморозки. Компактный дизайн и простота использования.",
+      "price": 12000,
+      "createdAt": "2024-08-12T15:30:55.351Z",
+      "views": 670,
+      "likes": 58,
+      "imageUrl": "https://30.img.avito.st/image/1/1.8Ixfnra4XGVpN55gM52w0iY8XmPhP95tKTpeZ-83VG_p.IyubEb9bIR5FedKoOyaGIv2wiD-ogGTVDzYws4uBexE"
     }
   ],
   "orders": [

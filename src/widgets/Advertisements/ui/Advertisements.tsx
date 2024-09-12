@@ -63,7 +63,10 @@ export const Advertisements: FC = () => {
   const totalPages = Math.ceil(totalRecords / limit);
 
   return (
-    <Stack direction="column" sx={{ paddingLeft: "60px" }}>
+    <Stack
+      direction="column"
+      sx={{ paddingLeft: "60px", paddingBottom: "15px" }}
+    >
       <Stack direction="row" alignItems="center">
         <Text as="h2" align="left" size="3xl" weight="bold">
           Ваши объявления
