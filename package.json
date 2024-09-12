@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode development --env mode=development --open",
+    "dev:server": "json-server --watch ./json-server/db.json -p 8000",
     "build:prod": "webpack  --env mode=production",
     "build:dev": "webpack  --env mode=development",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
@@ -34,6 +35,7 @@
     "@mui/styled-engine-sc": "^6.0.2",
     "@types/uuid": "^10.0.0",
     "framer-motion": "^11.5.4",
+    "json-server": "^1.0.0-beta.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.13",
