@@ -1,6 +1,6 @@
-import { Children, FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import advertisementsStyles from "./AdvertisementList.module.css";
-import { TAdvertisement } from "../../model/types/avertisementTypes";
+import { TAdvertisement } from "@/shared/types/avertisementTypes";
 import { AdevertisementItem } from "../AdvertisementItem/AdevertisementItem";
 import { Box, Stack } from "@mui/material";
 import { AdvertisementItemSkeleton } from "../AdvertisementSkeleton/AdvertisementSkeleton";

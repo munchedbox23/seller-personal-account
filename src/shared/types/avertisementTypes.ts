@@ -8,10 +8,3 @@ export type TAdvertisement = {
   likes: number;
   imageUrl?: string;
 };
-
-export type TUpdateAdvertisement = {
-  name?: string;
-  description?: string;
-  price?: number;
-  imageUrl?: string;
-};

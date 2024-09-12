@@ -4,6 +4,7 @@ import { NotFoundPage } from "@/pages/NotFoundPage/ui/NotFoundPage";
 import { appRoutes } from "@/shared/const/router";
 import { AdvertisementPage } from "@/pages/AdvertisementPage";
 import { Navigate } from "react-router-dom";
+import { SelectedAdvertisementPage } from "@/pages/SelectedAdvertisementPage";
 
 export const router = createBrowserRouter([
   { path: "/", element: <Navigate to={appRoutes.allAdvertisements} /> },
@@ -15,8 +16,10 @@ export const router = createBrowserRouter([
         index: true,
         element: <AdvertisementPage />,
       },
+      { path: appRoutes.advertisement, element: <SelectedAdvertisementPage /> },
     ],
   },
+
   {
     path: appRoutes.not_found,
     element: <NotFoundPage />,
