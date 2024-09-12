@@ -6,7 +6,7 @@ import { TCreateAdvertisement } from "../../model/types/addAdvertisement";
 import { addAdvertisementThunk } from "../../model/services/addAdvertisementThunk";
 import {
   selectLimit,
-  useGetAdvertisementsQuery,
+  useGetAdvertisementsByQueryQuery,
 } from "@/entities/Advertisement";
 import { useAppDispatch, useAppSelector } from "@/app/providers/StoreProvider";
 import { Preloader } from "@/shared/ui/Preloader";
@@ -21,7 +21,8 @@ import { useState } from "react";
 export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
   const dispatch = useAppDispatch();
   const limit = useAppSelector(selectLimit);
-  const { refetch } = useGetAdvertisementsQuery({ limit });
+  const start = useAppSelector((state) => state.advertisements.start);
+  const { refetch } = useGetAdvertisementsByQueryQuery({ start, limit });
   const isLoading = useAppSelector(
     (store) => store.addAdvertisements.isLoading
   );

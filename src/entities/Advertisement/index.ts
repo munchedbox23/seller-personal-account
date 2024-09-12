@@ -7,7 +7,8 @@ export {
 } from "./model/selectors/getAdvertisementsDetails";
 
 export {
-  useGetAdvertisementsQuery,
+  useGetAdvertisementsByQueryQuery,
+  useGetAllAdvertisementsQuery,
   advertisementsApi,
 } from "./api/advertisementsApi";
 

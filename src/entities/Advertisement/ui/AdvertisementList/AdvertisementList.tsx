@@ -27,13 +27,13 @@ export const AdvertisementList: FC<
         flexWrap="wrap"
         sx={{ marginRight: "-10px" }}
       >
-        {isLoading && advertisements.length
-          ? Array.from(new Array(10)).map((_, index) => (
+        {isLoading && !advertisements.length
+          ? Array.from(new Array(limit)).map((_, index) => (
               <AdvertisementItemSkeleton key={index} />
             ))
-          : advertisements
-              .slice(0, limit)
-              .map((item) => <AdevertisementItem data={item} key={item.id} />)}
+          : advertisements.map((item) => (
+              <AdevertisementItem data={item} key={item.id} />
+            ))}
       </Stack>
       {(isError || !advertisements.length) && (
         <Box sx={{ textAlign: "center", padding: "16px" }}>

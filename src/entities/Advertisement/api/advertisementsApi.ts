@@ -9,8 +9,15 @@ export const advertisementsApi = createApi({
   }),
   tagTypes: ["Advertisement"],
   endpoints: (builder) => ({
-    getAdvertisements: builder.query<TAdvertisement[], { limit: number }>({
-      query: ({ limit }) => `advertisements?_start=0&_limit=${limit}`,
+    getAllAdvertisements: builder.query<TAdvertisement[], void>({
+      query: () => `${API.endpoints.advertisement}`,
+    }),
+    getAdvertisementsByQuery: builder.query<
+      TAdvertisement[],
+      { start: number; limit: number }
+    >({
+      query: ({ start, limit }) =>
+        `${API.endpoints.advertisement}?_start=${start}&_limit=${limit}`,
       providesTags: (result) =>
         result
           ? result.map(({ id }) => ({ type: "Advertisement", id }))
@@ -19,4 +26,7 @@ export const advertisementsApi = createApi({
   }),
 });
 
-export const { useGetAdvertisementsQuery } = advertisementsApi;
+export const {
+  useGetAllAdvertisementsQuery,
+  useGetAdvertisementsByQueryQuery,
+} = advertisementsApi;

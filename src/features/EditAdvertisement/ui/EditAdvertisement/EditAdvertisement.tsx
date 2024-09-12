@@ -7,7 +7,7 @@ import { TAdvertisement } from "@/shared/types/avertisementTypes";
 import { useDeleteAdvertisementMutation } from "../../api/editAdvertisement";
 import {
   selectLimit,
-  useGetAdvertisementsQuery,
+  useGetAdvertisementsByQueryQuery,
 } from "@/entities/Advertisement";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "@/app/providers/StoreProvider";
@@ -22,7 +22,8 @@ export const EditAdvertisement: FC<EditAdvertisementProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [deleteAdvertisement] = useDeleteAdvertisementMutation();
   const limit = useAppSelector(selectLimit);
-  const { refetch } = useGetAdvertisementsQuery({ limit });
+  const start = useAppSelector((state) => state.advertisements.start);
+  const { refetch } = useGetAdvertisementsByQueryQuery({ start, limit });
   const navigate = useNavigate();
 
   const handleOpenModal = useCallback(() => {
