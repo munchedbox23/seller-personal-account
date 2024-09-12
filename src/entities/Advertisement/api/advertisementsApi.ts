@@ -9,8 +9,8 @@ export const advertisementsApi = createApi({
   }),
   tagTypes: ["Advertisement"],
   endpoints: (builder) => ({
-    getAdvertisements: builder.query<TAdvertisement[], void>({
-      query: () => API.endpoints.advertisement,
+    getAdvertisements: builder.query<TAdvertisement[], { limit: number }>({
+      query: ({ limit }) => `advertisements?_start=0&_limit=${limit}`,
       providesTags: (result) =>
         result
           ? result.map(({ id }) => ({ type: "Advertisement", id }))

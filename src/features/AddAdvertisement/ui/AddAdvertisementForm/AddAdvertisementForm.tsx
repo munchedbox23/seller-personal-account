@@ -4,7 +4,10 @@ import { TextField } from "@mui/material";
 import formStyles from "./AddAdvertisementForm.module.css";
 import { TCreateAdvertisement } from "../../model/types/addAdvertisement";
 import { addAdvertisementThunk } from "../../model/services/addAdvertisementThunk";
-import { useGetAdvertisementsQuery } from "@/entities/Advertisement";
+import {
+  selectLimit,
+  useGetAdvertisementsQuery,
+} from "@/entities/Advertisement";
 import { useAppDispatch, useAppSelector } from "@/app/providers/StoreProvider";
 import { Preloader } from "@/shared/ui/Preloader";
 import {
@@ -17,7 +20,8 @@ import { useState } from "react";
 
 export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
   const dispatch = useAppDispatch();
-  const { refetch } = useGetAdvertisementsQuery();
+  const limit = useAppSelector(selectLimit);
+  const { refetch } = useGetAdvertisementsQuery({ limit });
   const isLoading = useAppSelector(
     (store) => store.addAdvertisements.isLoading
   );
@@ -114,7 +118,7 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
             inputProps={{
               min: 0,
               max: 10000000,
-              step: 10000,
+              step: 1,
             }}
             label="Стоимость"
             name="price"

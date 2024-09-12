@@ -5,8 +5,12 @@ import EditAdvertisementForm from "../EditAdvertisementForm/EditAdvertisementFor
 import { Stack } from "@mui/material";
 import { TAdvertisement } from "@/shared/types/avertisementTypes";
 import { useDeleteAdvertisementMutation } from "../../api/editAdvertisement";
-import { useGetAdvertisementsQuery } from "@/entities/Advertisement";
+import {
+  selectLimit,
+  useGetAdvertisementsQuery,
+} from "@/entities/Advertisement";
 import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "@/app/providers/StoreProvider";
 
 interface EditAdvertisementProps {
   advertisement: TAdvertisement;
@@ -17,7 +21,8 @@ export const EditAdvertisement: FC<EditAdvertisementProps> = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [deleteAdvertisement] = useDeleteAdvertisementMutation();
-  const { refetch } = useGetAdvertisementsQuery();
+  const limit = useAppSelector(selectLimit);
+  const { refetch } = useGetAdvertisementsQuery({ limit });
   const navigate = useNavigate();
 
   const handleOpenModal = useCallback(() => {

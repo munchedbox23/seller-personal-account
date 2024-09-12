@@ -1,20 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { advertisementsApi } from "../../api/advertisementsApi";
 
 type TAdvertisementState = {
   isAdvertisementsLoading: boolean;
   advertisementsError: string | null;
+  limit: number;
+  start: number;
 };
 
 const initialState: TAdvertisementState = {
   isAdvertisementsLoading: false,
   advertisementsError: null,
+  start: 0,
+  limit: 10,
 };
 
 export const advertisementsSlice = createSlice({
   name: "advertisements",
   initialState,
-  reducers: {},
+  reducers: {
+    setLimit(state, action: PayloadAction<number>) {
+      state.limit = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addMatcher(
@@ -41,4 +49,5 @@ export const advertisementsSlice = createSlice({
   },
 });
 
+export const { setLimit } = advertisementsSlice.actions;
 export default advertisementsSlice.reducer;

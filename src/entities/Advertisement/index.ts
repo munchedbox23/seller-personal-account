@@ -3,6 +3,7 @@ export { AdvertisementList } from "./ui/AdvertisementList/AdvertisementList";
 export {
   selectAdvertisementsError,
   selectIsAdvertisementsLoading,
+  selectLimit,
 } from "./model/selectors/getAdvertisementsDetails";
 
 export {

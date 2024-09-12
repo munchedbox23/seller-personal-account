@@ -5,6 +5,8 @@ import { AdevertisementItem } from "../AdvertisementItem/AdevertisementItem";
 import { Box, Stack } from "@mui/material";
 import { AdvertisementItemSkeleton } from "../AdvertisementSkeleton/AdvertisementSkeleton";
 import { Text } from "@/shared/ui/Text";
+import { useAppSelector } from "@/app/providers/StoreProvider";
+import { selectLimit } from "../../model/selectors/getAdvertisementsDetails";
 
 type TAdvertisementListProps = {
   advertisements?: Array<TAdvertisement>;
@@ -15,6 +17,7 @@ type TAdvertisementListProps = {
 export const AdvertisementList: FC<
   PropsWithChildren<TAdvertisementListProps>
 > = ({ advertisements = [], isLoading, isError, children }) => {
+  const limit = useAppSelector(selectLimit);
   return (
     <article className={advertisementsStyles.advertisements}>
       <Stack
@@ -29,7 +32,7 @@ export const AdvertisementList: FC<
               <AdvertisementItemSkeleton key={index} />
             ))
           : advertisements
-              .slice(0, 10)
+              .slice(0, limit)
               .map((item) => <AdevertisementItem data={item} key={item.id} />)}
       </Stack>
       {(isError || !advertisements.length) && (
