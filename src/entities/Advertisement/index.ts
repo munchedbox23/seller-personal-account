@@ -8,10 +8,6 @@ export {
 export {
   useGetAdvertisementsQuery,
   advertisementsApi,
-  useGetAdvertisementByIdQuery,
-  useUpdateAdvertisementMutation,
-  usePatchAdvertisementMutation,
-  useDeleteAdvertisementMutation,
 } from "./api/advertisementsApi";
 
 export { AdevertisementItem } from "./ui/AdvertisementItem/AdevertisementItem";

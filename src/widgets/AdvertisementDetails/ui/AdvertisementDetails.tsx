@@ -7,6 +7,7 @@ import { Stack } from "@mui/material";
 import { FC, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/app/providers/StoreProvider";
 import { getAdvertisementById } from "@/entities/SelectedAdvertisement/model/slice/selectedAdvertisementSlice";
+import { EditAdvertisement } from "@/features/EditAdvertisement";
 
 export const AdvertisementDetails: FC<{ id: string }> = ({ id }) => {
   const dispatch = useAppDispatch();
@@ -21,7 +22,9 @@ export const AdvertisementDetails: FC<{ id: string }> = ({ id }) => {
 
   return (
     <Stack sx={{ width: "100%" }}>
-      <SelectedAdvertisement data={selectedAdvertisement} />
+      <SelectedAdvertisement data={selectedAdvertisement}>
+        <EditAdvertisement advertisement={selectedAdvertisement}/>
+      </SelectedAdvertisement>
     </Stack>
   );
 };

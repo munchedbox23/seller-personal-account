@@ -47,7 +47,7 @@ export const SelectedAdvertisement: FC<
             </Box>
           </Stack>
         </Box>
-        <Box sx={{ width: "30%" }}>
+        <Box sx={{ width: "35%" }}>
           <Stack direction="column">
             <Text as="span" weight="semibold" size="3xl" align="left">
               {`${data.price} ₽`}
