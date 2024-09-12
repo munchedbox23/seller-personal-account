@@ -19,7 +19,7 @@ export const ordersSlice = createSlice({
     builder
       .addMatcher(
         ordersApi.endpoints.getAllOrders.matchFulfilled,
-        (state, action) => {
+        (state) => {
           state.isOrdersLoading = false;
         }
       )
