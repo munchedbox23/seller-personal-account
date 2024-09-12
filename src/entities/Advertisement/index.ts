@@ -7,14 +7,12 @@ export {
 
 export type {
   TAdvertisement,
-  TCreateAdvertisement,
   TUpdateAdvertisement,
 } from "./model/types/avertisementTypes";
 
 export {
   useGetAdvertisementsQuery,
   advertisementsApi,
-  useCreateAdvertisementMutation,
   useGetAdvertisementByIdQuery,
   useUpdateAdvertisementMutation,
   usePatchAdvertisementMutation,

@@ -9,13 +9,6 @@ export type TAdvertisement = {
   imageUrl?: string;
 };
 
-export type TCreateAdvertisement = {
-  name: string;
-  description?: string;
-  price: number;
-  imageUrl?: string;
-};
-
 export type TUpdateAdvertisement = {
   name?: string;
   description?: string;
