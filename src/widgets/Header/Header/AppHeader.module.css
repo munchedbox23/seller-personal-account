@@ -7,6 +7,7 @@
   composes: header-flex;
   height: 70px;
   position: sticky;
+  top: 0;
   z-index: 11;
   width: 100%;
   background-color: var(--palette-white);

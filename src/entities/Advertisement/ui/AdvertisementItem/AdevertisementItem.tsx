@@ -1,22 +1,26 @@
 import { FC } from "react";
 import styles from "./AdevertisementItem.module.css";
-import { TAdvertisement } from "../../model/types/avertisementTypes";
+import { TAdvertisement } from "@/shared/types/avertisementTypes";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Stack } from "@mui/material";
 import { Text } from "@/shared/ui/Text";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import { formatDate } from "../../lib/formatDate";
+import { useAppDispatch } from "@/app/providers/StoreProvider";
+import { getAdvertisementById } from "@/entities/SelectedAdvertisement/model/slice/selectedAdvertisementSlice";
+import { formatDate } from "@/shared/lib/formatDate/formatDate";
 
 type TAdvertisementItemProps = {
   data: TAdvertisement;
 };
 
 export const AdevertisementItem: FC<TAdvertisementItemProps> = ({ data }) => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleChooseAdvertisement = (): void => {
+    dispatch(getAdvertisementById(data.id));
     navigate(`/advertisements/${data.id}`, {
       state: { from: location.pathname },
     });

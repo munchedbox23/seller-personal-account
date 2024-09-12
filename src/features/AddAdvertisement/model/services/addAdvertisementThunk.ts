@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { TAdvertisement } from "@/entities/Advertisement";
+import { TAdvertisement } from "@/shared/types/avertisementTypes";
 import { request } from "@/shared/lib/requests/requests";
 import { API } from "@/shared/const/baseUrl";
 import { TCreateAdvertisement } from "../types/addAdvertisement";

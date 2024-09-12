@@ -3,7 +3,7 @@ import { API } from "@/shared/const/baseUrl";
 import {
   TAdvertisement,
   TUpdateAdvertisement,
-} from "../model/types/avertisementTypes";
+} from "@/shared/types/avertisementTypes";
 
 export const advertisementsApi = createApi({
   reducerPath: "advertisementsApi",
