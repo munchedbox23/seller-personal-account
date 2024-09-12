@@ -1,14 +1,18 @@
 module.exports = {
-  testEnvironment: "jsdom",
-  clearMocks: true,
-  moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
-  moduleDirectories: ["node_modules"],
-  modulePaths: ["<rootDir>src"],
-  coveragePathIgnorePatterns: ["\\\\node_modules\\\\"],
-  setupFilesAfterEnv: ["<rootDir>/config/util/jest.setup.ts"],
-  moduleNameMapper: {
-    "\\.(css|scss)$": "identity-obj-proxy",
-    "^@/(.*)$": "<rootDir>/src/$1",
+  globals: {
+    "ts-jest": {
+      diagnostics: false,
+      isolatedModules: true,
+    },
   },
-  maxWorkers: 1,
+  coverageReporters: ["text", "html"],
+  preset: "ts-jest/presets/default-esm",
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.ts"],
+  testEnvironment: "jsdom",
+  moduleNameMapper: {
+    "\\.module\\.css$": "identity-obj-proxy",
+  },
+  transform: {
+    "\\.css$": "jest-css-modules-transform",
+  },
 };

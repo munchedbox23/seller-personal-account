@@ -247,4 +247,7 @@
   --size-xl-lineHeight: 22px;
   --size-xs-crossButtonIconSize: 10px;
   --size-xs-crossButtonSize: 24px;
+  --module-button-backgroundColor: #00aaff;
+  --module-button-backgroundColor-hover: #0099f7;
+  --module-button-backgroundColor-active: #008aed;
 }

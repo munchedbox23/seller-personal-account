@@ -1,15 +1,16 @@
 import { Outlet } from "react-router-dom";
-import Logo from "@/shared/assets/images/avito.png";
 import { FC } from "react";
+import { AppHeader } from "@/widgets/Header";
+import styles from "./MainLayout.module.css";
 
 export const MainLayout: FC = () => {
   return (
     <>
-      <header>
-        <img src={Logo} alt="Avito logo" />
-      </header>
-      <main>
-        <Outlet />
+      <AppHeader />
+      <main className={styles.mainContent}>
+        <div className={styles.contentWrapper}>
+          <Outlet />
+        </div>
       </main>
     </>
   );
