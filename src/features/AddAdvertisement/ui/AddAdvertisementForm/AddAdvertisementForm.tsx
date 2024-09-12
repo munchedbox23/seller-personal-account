@@ -7,6 +7,13 @@ import { addAdvertisementThunk } from "../../model/services/addAdvertisementThun
 import { useGetAdvertisementsQuery } from "@/entities/Advertisement";
 import { useAppDispatch, useAppSelector } from "@/app/providers/StoreProvider";
 import { Preloader } from "@/shared/ui/Preloader";
+import {
+  validateImageUrl,
+  validateName,
+  validateDescription,
+  validatePrice,
+} from "@/shared/lib/validateFunctions";
+import { useState } from "react";
 
 export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
   const dispatch = useAppDispatch();
@@ -15,6 +22,13 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
     (store) => store.addAdvertisements.isLoading
   );
 
+  const [errors, setErrors] = useState({
+    imageUrl: "",
+    name: "",
+    price: "",
+    description: "",
+  });
+
   const { formState, onChange } = useForm<TCreateAdvertisement>({
     imageUrl: "",
     name: "",
@@ -22,14 +36,45 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
     description: "",
   });
 
+  const validateForm = () => {
+    const imageUrlError = validateImageUrl(formState.imageUrl ?? "");
+    const nameError = validateName(formState.name ?? "");
+    const priceError = validatePrice(formState.price ?? 0);
+    const descriptionError = validateDescription(formState.description ?? "");
+
+    setErrors({
+      imageUrl: imageUrlError || "",
+      name: nameError || "",
+      price: priceError || "",
+      description: descriptionError || "",
+    });
+
+    return !imageUrlError && !nameError && !priceError && !descriptionError;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const result = await dispatch(addAdvertisementThunk(formState));
+    if (!validateForm()) return;
+
+    const result = await dispatch(
+      addAdvertisementThunk({
+        ...formState,
+        price: Number(formState.price),
+      })
+    );
     if (addAdvertisementThunk.fulfilled.match(result)) {
       refetch();
       if (!isLoading) {
         onClose();
       }
+    }
+  };
+
+  const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+
+    if (!isNaN(Number(value))) {
+      onChange(e);
     }
   };
 
@@ -45,9 +90,11 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
             label="Картинка"
             name="imageUrl"
             variant="outlined"
-            value={formState.imageUrl}
+            value={formState.imageUrl ?? ""}
             onChange={onChange}
             sx={{ width: "40%" }}
+            error={!!errors.imageUrl}
+            helperText={errors.imageUrl}
           />
           <TextField
             type="text"
@@ -55,9 +102,11 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
             label="Название"
             variant="outlined"
             name="name"
-            value={formState.name}
+            value={formState.name ?? ""}
             onChange={onChange}
             sx={{ width: "40%" }}
+            error={!!errors.name}
+            helperText={errors.name}
           />
           <TextField
             type="number"
@@ -70,9 +119,11 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
             label="Стоимость"
             name="price"
             variant="outlined"
-            value={Number(formState.price)}
-            onChange={onChange}
+            value={formState.price ?? 0}
+            onChange={handlePriceChange}
             sx={{ width: "40%" }}
+            error={!!errors.price}
+            helperText={errors.price}
           />
           <TextField
             id="outlined-multiline-static"
@@ -81,9 +132,11 @@ export const AddAdvertisementForm = ({ onClose }: { onClose: () => void }) => {
             multiline
             name="description"
             rows={3}
-            value={formState.description}
+            value={formState.description ?? ""}
             onChange={onChange}
             sx={{ width: "40%" }}
+            error={!!errors.description}
+            helperText={errors.description}
           />
           <Button type="submit" variant="primary" size="sm">
             Создать объявление

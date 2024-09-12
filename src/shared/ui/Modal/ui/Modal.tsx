@@ -56,7 +56,8 @@ export const Modal: FC<PropsWithChildren<TModalProps>> = memo(
             zIndex: 30,
             textAlign: "center",
             width: "40%",
-            height: "30rem",
+            minHeight: "30rem",
+            maxHeight: "55rem",
             borderRadius: "1.5rem",
             backgroundColor: "rgb(241 245 249)",
           }}
