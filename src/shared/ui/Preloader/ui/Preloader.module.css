@@ -4,15 +4,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: #000;
+  background: transparent;
   opacity: 0.6;
   z-index: 10;
 }
 
 .loader {
   position: absolute;
-  top: calc(50% - 32px);
-  left: calc(50% - 32px);
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -31,21 +32,21 @@
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 5px solid #efeffa;
+  border-bottom: 7px solid var(--module-button-backgroundColor);
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 5px solid #efeffa;
+  border-right: 7px solid #ff6163;
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 5px solid #efeffa;
+  border-top: 7px solid rgb(4, 224, 97);
 }
 
 @keyframes rotate-one {

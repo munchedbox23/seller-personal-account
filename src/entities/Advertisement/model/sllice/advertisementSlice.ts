@@ -1,5 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TAdvertisement } from "../types/avertisementTypes";
+import { createSlice } from "@reduxjs/toolkit";
 import { advertisementsApi } from "../../api/advertisementsApi";
 
 type TAdvertisementState = {
@@ -20,7 +19,7 @@ export const advertisementsSlice = createSlice({
     builder
       .addMatcher(
         advertisementsApi.endpoints.getAdvertisements.matchFulfilled,
-        (state, action: PayloadAction<TAdvertisement[]>) => {
+        (state) => {
           state.isAdvertisementsLoading = false;
           state.advertisementsError = null;
         }

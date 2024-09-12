@@ -1,0 +1,27 @@
+.cardPoster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.advertisementDetails > h3 {
+  color: #00aaff;
+  line-height: 1.375;
+  transition: color 0.3s ease;
+}
+
+.advertisementDetails > h3:hover {
+  color: #ff6163;
+}
+
+.advertisementDetails > span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.date {
+  color: var(--palette-gray54);
+}
