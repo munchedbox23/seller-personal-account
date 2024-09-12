@@ -2,10 +2,10 @@ import headerStyles from "./AppHeader.module.css";
 import { FC } from "react";
 import Logo from "@/shared/assets/images/avito.png";
 import { Link } from "react-router-dom";
-import { Button } from "@/shared/ui/Button";
 import { ProfileDropdown } from "@/features/profileDropdown";
 import { SearchInput } from "@/features/common/SearchInput";
 import { Stack } from "@mui/material";
+import { AddAdvertisement } from "@/features/AddAdvertisement";
 
 export const AppHeader: FC = () => {
   return (
@@ -28,9 +28,7 @@ export const AppHeader: FC = () => {
             }}
           >
             <ProfileDropdown />
-            <Button type="button" variant="primary" size="sm">
-              Разместить объявление
-            </Button>
+            <AddAdvertisement />
           </Stack>
         </nav>
       </div>
