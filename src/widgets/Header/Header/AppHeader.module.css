@@ -19,6 +19,7 @@
   margin: 0 auto;
   height: 100%;
   padding: 16px;
+  gap: 20px;
   width: 100%;
   justify-content: space-between;
 }
