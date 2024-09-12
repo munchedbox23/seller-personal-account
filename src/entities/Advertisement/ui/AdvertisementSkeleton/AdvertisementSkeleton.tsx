@@ -8,7 +8,7 @@ export const AdvertisementItemSkeleton: FC = () => {
     <Box
       sx={{
         width: "250px",
-        marginBottom: "20px",
+        margin: "0 10px 25px 0 !important",
       }}
     >
       <Stack

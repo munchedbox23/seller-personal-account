@@ -19,7 +19,7 @@ export const Advertisements: FC = () => {
   const { data: advertisements = [] } = useGetAdvertisementsQuery();
 
   return (
-    <Stack>
+    <Stack direction="column" sx={{ paddingLeft: "60px" }}>
       <Text as="h2" align="left" size="3xl" weight="bold">
         Ваши объявления
       </Text>

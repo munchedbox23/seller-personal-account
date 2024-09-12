@@ -76,6 +76,26 @@
       "views": 200000,
       "likes": 302,
       "imageUrl": "https://avatars.mds.yandex.net/i?id=ef9f6fa5b7e7f11d46d44dfe47d9b7ee_l-8438571-images-thumbs&n=13"
+    },
+    {
+      "id": "016ebc00-2578-4d5d-83d9-7acb0fc2da0f",
+      "imageUrl": "https://ray-ban-msk.ru/images/product/l/513163fd.jpg",
+      "name": "gfagag",
+      "price": 10000,
+      "description": "gaga",
+      "views": 0,
+      "likes": 0,
+      "createdAt": "2024-09-12T12:38:45.910Z"
+    },
+    {
+      "id": "ac788895-409d-4f81-b606-d8f88c9d4568",
+      "imageUrl": "https://mountain.nsu.ru/nas_tour/Terskey2016.08/photos/hi-res/IMG_35935.JPG",
+      "name": "пыпып",
+      "price": 10000,
+      "description": "рыпы",
+      "views": 0,
+      "likes": 0,
+      "createdAt": "2024-09-12T12:59:28.157Z"
     }
   ],
   "orders": [
