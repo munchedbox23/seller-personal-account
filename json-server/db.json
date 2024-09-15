@@ -174,7 +174,7 @@
   "orders": [
     {
       "id": "d2f92b07-5b08-46e0-a8a4-2d8b2a8b423b",
-      "status": 0,
+      "status": 4,
       "createdAt": "2024-08-12T20:20:55.351Z",
       "finishedAt": "",
       "total": 314000,
