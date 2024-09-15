@@ -8,7 +8,7 @@ import { Preloader } from "@/shared/ui/Preloader";
 
 type TOrdersList = {
   isLoading: boolean;
-  isError?: string | null;
+  isError?: boolean;
   orders: TOrder[];
 };
 

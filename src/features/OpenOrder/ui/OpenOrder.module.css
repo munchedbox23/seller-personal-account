@@ -1,0 +1,6 @@
+.orderPoster {
+  width: 45px;
+  height: 45px;
+  object-fit: fill;
+  border-radius: 50%;
+}

@@ -49,7 +49,13 @@ export const SelectedAdvertisement: FC<
         </Box>
         <Box sx={{ width: "35%" }}>
           <Stack direction="column">
-            <Text as="span" weight="semibold" size="3xl" align="left">
+            <Text
+              data-cy="price"
+              as="span"
+              weight="semibold"
+              size="3xl"
+              align="left"
+            >
               {`${data.price} ₽`}
             </Text>
             <Stack direction="row" spacing={2}>

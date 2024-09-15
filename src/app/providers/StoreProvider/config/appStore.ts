@@ -4,6 +4,7 @@ import { rootReducer } from "./rootReducer";
 import { advertisementsApi } from "@/entities/Advertisement/api/advertisementsApi";
 import { editAdvertisementsApi } from "@/features/EditAdvertisement/api/editAdvertisement";
 import { ordersApi } from "@/entities/Orders";
+import { executeOrderApi } from "@/features/OpenOrder";
 
 export const store = configureStore({
   reducer: rootReducer,
@@ -11,7 +12,8 @@ export const store = configureStore({
     getDefaultMiddleware().concat(
       advertisementsApi.middleware,
       editAdvertisementsApi.middleware,
-      ordersApi.middleware
+      ordersApi.middleware,
+      executeOrderApi.middleware
     ),
 });
 

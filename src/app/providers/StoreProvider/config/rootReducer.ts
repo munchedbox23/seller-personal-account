@@ -5,14 +5,14 @@ import addAdvertisementSlice from "@/features/AddAdvertisement/model/slice/addAd
 import selectedAdvertisementSlice from "@/entities/SelectedAdvertisement/model/slice/selectedAdvertisementSlice";
 import { editAdvertisementsApi } from "@/features/EditAdvertisement/api/editAdvertisement";
 import { ordersApi } from "@/entities/Orders";
-import ordersSlice from "@/entities/Orders/model/slice/ordersSlice";
+import { executeOrderApi } from "@/features/OpenOrder";
 
 export const rootReducer = combineReducers({
   [advertisementsApi.reducerPath]: advertisementsApi.reducer,
   [editAdvertisementsApi.reducerPath]: editAdvertisementsApi.reducer,
   [ordersApi.reducerPath]: ordersApi.reducer,
+  [executeOrderApi.reducerPath]: executeOrderApi.reducer,
   advertisements: advertisementSlice,
-  orders: ordersSlice,
   addAdvertisements: addAdvertisementSlice,
   selectedAdvertisement: selectedAdvertisementSlice,
 });
