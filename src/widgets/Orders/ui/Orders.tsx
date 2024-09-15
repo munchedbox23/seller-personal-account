@@ -1,19 +1,11 @@
 import { FC } from "react";
 import { Stack } from "@mui/material";
 import { Text } from "@/shared/ui/Text";
-import {
-  getSelectorError,
-  getSelectorLoading,
-  OrdersList,
-  useGetAllOrdersQuery,
-} from "@/entities/Orders";
-import { useAppSelector } from "@/app/providers/StoreProvider";
-import { OpenOrder } from "@/features/OpenOrder";
+import { OrdersList, useGetAllOrdersQuery } from "@/entities/Orders";
 
 export const Orders: FC = () => {
-  const { data: allOrders = [] } = useGetAllOrdersQuery();
-  const isLoading = useAppSelector(getSelectorLoading);
-  const isError = useAppSelector(getSelectorError);
+  const { data: allOrders = [], isError, isLoading } = useGetAllOrdersQuery();
+
   return (
     <Stack
       direction="column"
@@ -24,11 +16,7 @@ export const Orders: FC = () => {
           Заказы
         </Text>
       </Stack>
-      <OrdersList
-        orders={allOrders}
-        isLoading={isLoading}
-        isError={isError}
-      />
+      <OrdersList orders={allOrders} isLoading={isLoading} isError={isError} />
     </Stack>
   );
 };

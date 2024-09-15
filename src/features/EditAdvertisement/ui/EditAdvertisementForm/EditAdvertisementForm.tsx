@@ -123,7 +123,7 @@ const EditAdvertisementForm = ({
           <TextField
             type="number"
             autoComplete="off"
-            inputProps={{ min: 0, max: 10000000, step: 10000 }}
+            inputProps={{ min: 0, max: 10000000, step: 1 }}
             label="Стоимость"
             name="price"
             variant="outlined"
