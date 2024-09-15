@@ -2,17 +2,16 @@ module.exports = {
   globals: {
     "ts-jest": {
       diagnostics: false,
-      isolatedModules: true,
     },
   },
   coverageReporters: ["text", "html"],
-  preset: "ts-jest/presets/default-esm",
-  setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.ts"],
+  preset: "ts-jest",
   testEnvironment: "jsdom",
-  moduleNameMapper: {
-    "\\.module\\.css$": "identity-obj-proxy",
-  },
+  setupFilesAfterEnv: ["<rootDir>/setupTests.ts"],
   transform: {
-    "\\.css$": "jest-css-modules-transform",
+    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.jsx?$": "babel-jest",
   },
+  testMatch: ["**/?(*.)+(spec|test).[tj]s?(x)"],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };

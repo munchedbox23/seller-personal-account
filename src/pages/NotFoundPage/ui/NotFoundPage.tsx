@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const NotFoundPage: FC = () => {
   return (
-    <div className={styles.notFound}>
+    <div data-testId="NotFoundPage" className={styles.notFound}>
       <div className={styles.noise}></div>
       <div className={styles.overlay}></div>
       <div className={styles.terminal}>
